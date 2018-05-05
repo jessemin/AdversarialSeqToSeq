@@ -1,5 +1,5 @@
 outputs
-models
+saved_models
 logs
 
 *.ckpt
