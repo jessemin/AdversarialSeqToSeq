@@ -11,7 +11,7 @@ We impute histone ChIP-seq signal from ATAC-seq signal using the adversarial tra
 
 We introduce three major modifications to the vanilla generative adversarial network architecture.
 1. Generator component of deep adversarial network so that the generator takes ATAC-seq signal instead of random noise and outputs ChIP-seq signal
-2, Composite loss function that takes account of both mean squared error and adversarial loss
+2. Composite loss function that takes account of both mean squared error and adversarial loss
 3. One-sided label smoothing as introduced in Salimans et al.(2016)
 
 ![Adversarial Model](images/adv_architecture.png)
