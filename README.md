@@ -14,7 +14,7 @@ We introduce three major modifications to the vanilla generative adversarial net
 2. Composite loss function that takes account of both mean squared error and adversarial loss
 3. One-sided label smoothing as introduced in Salimans et al.(2016)
 
-![Adversarial Model](images/adv_architecture.png)
+![Adversarial Model]()
 
 We trained our model on GeForce GTX TITAN X for 300 epochs.
 
