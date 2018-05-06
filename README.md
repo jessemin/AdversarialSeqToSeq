@@ -6,7 +6,7 @@ We impute histone ChIP-seq signal from ATAC-seq signal using the adversarial tra
 
 Here's the idea: 
 
-![Task Overview](images/overview.png){:width="50%"}
+<img src="images/overview.png" width="50%">
 
 We introduce three major modifications to the vanilla generative adversarial network architecture.
 1. Generator component of deep adversarial network so that the generator takes ATAC-seq signal instead of random noise and outputs ChIP-seq signal
