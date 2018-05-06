@@ -6,12 +6,16 @@ We impute histone ChIP-seq signal from ATAC-seq signal using the adversarial tra
 
 <p align="center">
     <img src="imgs/overview.png" width="30%" align="middle">
-</p>
+</p><br/>
 
-We introduce three major modifications to the vanilla generative adversarial network architecture.
+Buenrostro et al.(2013)[3] showed that different chromatin states such as CTCF, TSS, enhancer sites, and repressed regions show clear fragment length distribution of ATAC-seq reads. In other words, the position and fragment length of ATAC-seq signal can be predictive
+of different chromatin states and functionalities. This implies that ChIP-seq peaks may be correlatd with ATAC-seq peaks, because we can infer chromatin states using histone ChIP-seq signals. Given that ATAC-seq requires only 500 to 50,000 cells, while ChIP-Seq requires much larger biological samples, typically millions of cells, regressing ChIP-seq based on ATAC-seq data is a meaningful task.
+
+While convolutional neural network has been widely used in the field of deep learning for genomics, we expect deep adversarial network to perform better in large-scale epigenomic signal imputation task than CNN. We introduce three major modifications to the vanilla generative adversarial network architecture.
+
 1. Generator component of deep adversarial network so that the generator takes ATAC-seq signal instead of random noise and outputs ChIP-seq signal
 2. Composite loss function that takes account of both mean squared error and adversarial loss
-3. One-sided label smoothing as introduced in Salimans et al.(2016)
+3. One-sided label smoothing as introduced in Salimans et al.(2016)[2]
 
 
 <br/>
@@ -51,7 +55,7 @@ For more details, please refer to the paper. Note that we cannot provide our ATA
 
 ## Dependencies
 
-We use Keras with Tensorflow backend in this code.
+We use Keras 2.0 with Tensorflow backend and [genomelake](https://pypi.org/project/genomelake/) for the implementation.
 
 To install all dependencies, run:
 
@@ -73,7 +77,9 @@ If you have any questions, please contact:
 
 ## References
 
-[1] Partially adopted the implementation from:
+[1] We partially adopted the structure from:
 <https://github.com/eriklindernoren/Keras-GAN/tree/master/gan>
 
 [2] Salimans, T., Goodfellow, I., Zaremba, W., Cheung, V., Radford, A. and Chen, X. (2018). Improved Techniques for Training GANs. [online] Arxiv.org. Available at: https://arxiv.org/abs/1606.03498 [Accessed 6 May 2018].
+
+[3] Jason D Buenrostro, Paul G Giresi, Lisa C Zaba, Howard Y Chang, and William J Greenleaf. Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, dna-binding proteins and nucleosome position. Nature Methods, 2013.
