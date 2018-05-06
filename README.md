@@ -9,9 +9,9 @@ We impute histone ChIP-seq signal from ATAC-seq signal using the adversarial tra
 </p><br/>
 
 Buenrostro et al.(2013)[3] showed that different chromatin states such as CTCF, TSS, enhancer sites, and repressed regions show clear fragment length distribution of ATAC-seq reads. In other words, the position and fragment length of ATAC-seq signal can be predictive
-of different chromatin states and functionalities. This implies that ChIP-seq peaks may be correlatd with ATAC-seq peaks, because we can infer chromatin states using histone ChIP-seq signals. Given that ATAC-seq requires only 500 to 50,000 cells, while ChIP-Seq requires much larger biological samples, typically millions of cells, regressing ChIP-seq based on ATAC-seq data is a meaningful task.
+of different chromatin states and functionalities. This implies that ChIP-seq peaks may be correlatd with ATAC-seq peaks as we can infer chromatin states using histone ChIP-seq. In addition, ATAC-seq requires only 500 to 50,000 cells, while ChIP-Seq requires much larger biological samples, typically millions of cells. Hence, regressing ChIP-seq signal based on ATAC-seq signal is a meaningful task.
 
-While convolutional neural network has been widely used in the field of deep learning for genomics, we expect deep adversarial network to perform better in large-scale epigenomic signal imputation task than CNN. We introduce three major modifications to the vanilla generative adversarial network architecture.
+While convolutional neural network has been widely used in the field of deep learning for genomics, we expect deep adversarial network to perform better in large-scale epigenomic signal imputation tasks than CNN. We introduce three major modifications to the vanilla generative adversarial network architecture.
 
 1. Generator component of deep adversarial network so that the generator takes ATAC-seq signal instead of random noise and outputs ChIP-seq signal
 2. Composite loss function that takes account of both mean squared error and adversarial loss
