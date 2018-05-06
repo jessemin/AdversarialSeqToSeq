@@ -5,7 +5,8 @@ This repository contains the implementation for my honors thesis paper: **A Sequ
 We impute histone ChIP-seq signal from ATAC-seq signal using the adversarial training approach we propose in the paper. 
 
 Here's the idea: 
-![Task Overview](images/overview.png)
+
+![Task Overview](images/overview.png){:width="50%"}
 
 We introduce three major modifications to the vanilla generative adversarial network architecture.
 1. Generator component of deep adversarial network so that the generator takes ATAC-seq signal instead of random noise and outputs ChIP-seq signal
@@ -19,9 +20,11 @@ We trained our model on GeForce GTX TITAN X for 300 epochs.
 Here are few visualizations created with WashU Epigenome Browser.
 
 The first visualization shows how the generator trained through adversarial training outperforms the CNN-based model. We can observe that the adversarial model captures all three ChIP-seq peaks, while the CNN only capture one ChIP-seq peak in the middle. Although the leftmost ChIP-seq peak is not as clearly distinguishable as the other two peaks are, we still get a clear sense that there are three major peaks where ChIP-seq signal is signicant.
+
 ![Example 1](images/best_results.png)
 
 The second visulization is another visualization of prediction made by the generator trained through adversarial training. The position where the ATAC-seq peak occurs in the first channel represents nucleosome-free regions, where the ChIP-seq signal does not usually exist. The adversarial model correctly predicts that there would be no ChIP-seq signal at this particular position. The positions where the ATAC-seq peaks are present in the second and the third channels represent nucleosomal regions where the ChIP-seq peaks usually exist, and the adversarial model also very clearly predicts the two peaks in the nucleosomal regions. This result is promising and suggests that adversarial model can capture biological implication between ATAC-seq and ChIP-seq signal.
+
 ![Example 2](images/perchannel_best2.png)
 
 For more details, please refer to the paper. Note that we cannot provide our ATAC-seq and ChIP-seq dataset used in the paper.
