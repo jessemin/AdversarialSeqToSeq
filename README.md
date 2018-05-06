@@ -1,6 +1,8 @@
 #  A Sequence-to-sequence Regression of Genome-wide Chromatin Data Through Adversarial Training
 
-This repository contains the implementation for my honors thesis paper: **A Sequence-to-sequence Regression of Genome-wide Chromatin Data Through Adversarial Training** We try to impute histone ChIP-seq signal from ATAC-seq signal using the adversarial training approach we propose in the paper.  For more details, please refer to the paper. Please also note that we cannot provide our ATAC-seq and ChIP-seq dataset.
+This repository contains the implementation for my honors thesis paper: **A Sequence-to-sequence Regression of Genome-wide Chromatin Data Through Adversarial Training**.
+
+We impute histone ChIP-seq signal from ATAC-seq signal using the adversarial training approach we propose in the paper. For more details, please refer to the paper. Note that we cannot provide our ATAC-seq and ChIP-seq dataset used in the paper.
 
 ## How to Run
 
