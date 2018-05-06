@@ -66,4 +66,5 @@ If you have any questions, please contact:
 
 [1] Partially adopted the implementation from:
 <https://github.com/eriklindernoren/Keras-GAN/tree/master/gan>
+
 [2] Salimans, T., Goodfellow, I., Zaremba, W., Cheung, V., Radford, A. and Chen, X. (2018). Improved Techniques for Training GANs. [online] Arxiv.org. Available at: https://arxiv.org/abs/1606.03498 [Accessed 6 May 2018].
