@@ -44,6 +44,8 @@ For more details, please refer to the paper. Note that we cannot provide our ATA
 
 ## Dependencies
 
+We use Keras with Tensorflow backend in this code.
+
 To install all dependencies, run:
 
     pip install -r requirements.txt
